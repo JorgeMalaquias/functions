@@ -1,3 +1,4 @@
+//retorna uma matriz quadrada com suas diagonais invertidas
 function diagonalReverse(matrix) {
     const newMatrix = [...matrix];
     let l1 = 0;
@@ -20,6 +21,7 @@ function diagonalReverse(matrix) {
     return newMatrix;
 }
 
+//Retorna o número de vezes que uma matriz (matrixB) se repete dentro de outra matriz (matrixA)
 function countMatrix(matrixA, matrixB) {
     let count = 0;
     for (let i = 0; i < matrixA.length; i++) {
@@ -47,29 +49,3 @@ function countMatrix(matrixA, matrixB) {
     }
     return count;
 }
-
-
-console.log("Example 1");
-const matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
-for (let i = 0; i < matrix.length; i++) {
-    console.log(matrix[i]);
-}
-console.log("");
-const newMatrix = diagonalReverse(matrix);
-for (let i = 0; i < newMatrix.length; i++) {
-    console.log(newMatrix[i]);
-}
-
-console.log("Example 2");
-const matrixA = [[1, 3, 3, 3], [3, 3, 6, 6], [6, 6, 9, 14], [1, 3, 3, 3], [3, 3, 6, 6], [6, 6, 9, 14]];
-const matrixB = [[3, 3], [6, 6]];
-console.log("matrix A");
-for (let i = 0; i < matrixA.length; i++) {
-    console.log(matrixA[i]);
-}
-console.log("submatrix B");
-for (let i = 0; i < matrixB.length; i++) {
-    console.log(matrixB[i]);
-}
-const count = countMatrix(matrixA, matrixB);
-console.log(`Matrix b repeats ${count} time(s) in the Matrix A!`);
